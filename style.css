@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+* {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/*まずはお決まりのボックスサイズ算出をborer-boxに */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+/* body{
+background-color: #c2e3ff;
+} */
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: ;/*rem算出をしやすくするために*/
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+#top_title_big {
+  font-size: 40px;
+}
+#top_title_sub {
+  font-size: 20px;
+}
+.center {
+  text-align: center;
+}
+#login_form input {
+    height: 2.4em;
+    width: 100%;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#login_form input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px orange inset;
+}
+/*その他と主な共通部分は省略*/
+
+a.btn-flat {
+  overflow: hidden;
+
+  padding: 1.5rem 6rem;
+
+  color: #fff;
+  border-radius: 0;
+  background: #000;
+}
+
+a.btn-flat span {
+  position: relative;
+}
+
+a.btn-flat:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100px;
+  height: 100px;
+
+  content: '';
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-80%) translateY(-25px);
+  transform: translateX(-80%) translateY(-25px);
+
+  border-radius: 50%;
+  background: #eb6100;
+}
+
+a.btn-flat:hover:before {
+  width: 400px;
+  height: 400px;
+
+  -webkit-transform: translateX(-1%) translateY(-175px);
+
+  transform: translateX(-1%) translateY(-175px);
+}
+#acount_user_image {
+  margin: 0 0 0 0;
+  border-radius: 15px;
+  width: 60px;
+  height: 60px;
+  border: 3px solid #636363;
+}
+.m-form-item-textarea textarea {
+    height: 300px;
+}
+
+.m-form-textarea {
+    display: block;
+    width: 50%;
+    padding: 4px 16px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    resize: vertical;
+}
+
+.m-form-textarea:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
+}
+.username {
+  font-size: 20px;
+}
+.content {
+  font-size: 18px;
+}
+.datetime {
+  font-size: 12px;
+  color: #a1a1a1;
+}
+#icon {
+  margin: 0 0 0 10px;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #636363;
+  
+}
+.auth {
+  font-size: 14px;
+  color: #a1a1a1;
+}
+/*全体*/
+.hidden_box {
+    margin: 2em 0;/*前後の余白*/
+    padding: 0;
+}
+
+/*ボタン装飾*/
+.hidden_box label {
+    padding: 15px;
+    font-weight: bold;
+    border: solid 2px black;
+    cursor :pointer;
+}
+
+/*ボタンホバー時*/
+.hidden_box label:hover {
+    background: #efefef;
+}
+
+/*チェックは見えなくする*/
+.hidden_box #label1 {
+    display: none;
+}
+
+/*中身を非表示にしておく*/
+.hidden_box .hidden_show {
+  margin-top: 10px;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+/*クリックで中身表示*/
+.hidden_box input:checked ~ .hidden_show {
+    padding: 10px 0;
+    height: auto;
+    opacity: 1;
+}
+.container{
+        display: flex;
+        width: 100%;
+ 
+        /*並び順*/
+        /*
+        flex-start：左寄せ（デフォルト）
+        flex-end：右寄せ
+        center： 中央寄せ
+        space-between：残り余白の均等割り 
+        space-around：左右余白 ＋ 均等割り
+        */
+        justify-content: space-around;
